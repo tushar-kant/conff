@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript"></script>
+      </head>
+      
+      <body class="w3-pale-red w3-text-sand">
+        
+        <div class="w3-container w3-padding-jumbo">
+          <div  id="ily" class="w3-card-24 w3-red w3-center">
+            <h1 style="padding-top:40px;">I LOVE YOU</h1>
+            <h2>Do you love me?</h2>
+            <div class="w3-section w3-padding-bottom">
+              <button id="yes" class="w3-btn w3-pink">Yes</button>
+              <button id="no" class="w3-btn ">No</button>
+            </div>
+            <div id="imgs" class="w3-container w3-padding-jumbo w3-center">
+              <img id="yesimg" class="w3-image" src="https://media0.giphy.com/media/l41JWw65TcBGjPpRK/giphy.gif" alt="" style="display:none"/>
+              <img id="noimg" class="w3-image" src="http://bestanimations.com/Signs&Shapes/Hearts/broken-heart-animation23.gif" alt="" style="display:none"/>
+            </div>
+          </div>
+        </div>  
+      </body>
+      <script>
+        $(document).ready(function() {
+
+
+$("#ily").hover(function() {
+    $("#ily").removeClass("w3-red");
+    $("body").removeClass("w3-pale-red");
+    $("body").addClass("w3-red");
+    $("#ily").addClass("w3-pale-red");
+}, function() {
+    $("#ily").removeClass("w3-pale-red");
+    $("body").removeClass("w3-red");
+    $("body").addClass("w3-pale-red");
+    $("#ily").addClass("w3-red");
+});
+
+$("#yes").click(function() {
+    $("#noimg").hide("fast");
+    $("#yesimg").fadeIn(3000);
+  window.alert("I Love U too");
+});
+$("#no").click(function() {
+    $("#yesimg").hide("fast");
+    $("#noimg").fadeIn(3000);
+});
+
+});
+      </script>
+</html>
